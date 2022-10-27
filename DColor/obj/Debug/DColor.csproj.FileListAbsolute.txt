@@ -81,179 +81,86 @@ C:\Users\kevin.rodriguez\Documents\DColor\DColor\obj\Debug\DColor.csproj.CoreCom
 C:\Users\kevin.rodriguez\Documents\DColor\DColor\obj\Debug\DColor.csproj.CopyComplete
 C:\Users\kevin.rodriguez\Documents\DColor\DColor\obj\Debug\DColor.dll
 C:\Users\kevin.rodriguez\Documents\DColor\DColor\obj\Debug\DColor.pdb
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\DColor.dll.config
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\DColor.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\DColor.pdb
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csc.exe
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csc.exe.config
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csc.rsp
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csi.exe
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csi.exe.config
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\csi.rsp
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.AppContext.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Console.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.IO.Compression.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Net.Http.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Net.Sockets.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.ValueTuple.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Xml.XPath.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\vbc.exe
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\vbc.exe.config
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\vbc.rsp
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\VBCSCompiler.exe
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Antlr3.Runtime.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\CaptchaMvc.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\EntityFramework.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\EntityFramework.SqlServer.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Newtonsoft.Json.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Helpers.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Mvc.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Optimization.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Razor.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.Deployment.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.Razor.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\WebGrease.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\CaptchaMvc.pdb
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\CaptchaMvc.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\EntityFramework.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\EntityFramework.SqlServer.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Helpers.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Mvc.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Optimization.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.Razor.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.Deployment.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Web.WebPages.Razor.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Newtonsoft.Json.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Antlr3.Runtime.pdb
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\obj\Debug\DColor.csproj.AssemblyReference.cache
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\obj\Debug\DColor.csproj.CoreCompileInputs.cache
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\obj\Debug\DColor.csproj.CopyComplete
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\obj\Debug\DColor.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\obj\Debug\DColor.pdb
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Data.SqlClient.dll
-C:\Users\kevin.rodriguez\Documents\Dcolor1\DColor\bin\System.Data.SqlClient.xml
-C:\DColor Login\DColor\obj\Debug\DColor.csproj.AssemblyReference.cache
-C:\DColor Login\DColor\obj\Debug\DColor.csproj.CoreCompileInputs.cache
-C:\DColor Login\DColor\obj\Debug\DColor.dll
-C:\DColor Login\DColor\obj\Debug\DColor.pdb
-C:\DColor Login\DColor\bin\DColor.dll.config
-C:\DColor Login\DColor\bin\DColor.dll
-C:\DColor Login\DColor\bin\DColor.pdb
-C:\DColor Login\DColor\bin\roslyn\csc.exe
-C:\DColor Login\DColor\bin\roslyn\csc.exe.config
-C:\DColor Login\DColor\bin\roslyn\csc.rsp
-C:\DColor Login\DColor\bin\roslyn\csi.exe
-C:\DColor Login\DColor\bin\roslyn\csi.exe.config
-C:\DColor Login\DColor\bin\roslyn\csi.rsp
-C:\DColor Login\DColor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\DColor Login\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\DColor Login\DColor\bin\roslyn\Microsoft.Managed.Core.targets
-C:\DColor Login\DColor\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\DColor Login\DColor\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\DColor Login\DColor\bin\roslyn\System.AppContext.dll
-C:\DColor Login\DColor\bin\roslyn\System.Collections.Immutable.dll
-C:\DColor Login\DColor\bin\roslyn\System.Console.dll
-C:\DColor Login\DColor\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\DColor Login\DColor\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\DColor Login\DColor\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\DColor Login\DColor\bin\roslyn\System.Globalization.Calendars.dll
-C:\DColor Login\DColor\bin\roslyn\System.IO.Compression.dll
-C:\DColor Login\DColor\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\DColor Login\DColor\bin\roslyn\System.IO.FileSystem.dll
-C:\DColor Login\DColor\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\DColor Login\DColor\bin\roslyn\System.Net.Http.dll
-C:\DColor Login\DColor\bin\roslyn\System.Net.Sockets.dll
-C:\DColor Login\DColor\bin\roslyn\System.Reflection.Metadata.dll
-C:\DColor Login\DColor\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\DColor Login\DColor\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\DColor Login\DColor\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\DColor Login\DColor\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\DColor Login\DColor\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\DColor Login\DColor\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\DColor Login\DColor\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\DColor Login\DColor\bin\roslyn\System.ValueTuple.dll
-C:\DColor Login\DColor\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\DColor Login\DColor\bin\roslyn\System.Xml.XmlDocument.dll
-C:\DColor Login\DColor\bin\roslyn\System.Xml.XPath.dll
-C:\DColor Login\DColor\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\DColor Login\DColor\bin\roslyn\vbc.exe
-C:\DColor Login\DColor\bin\roslyn\vbc.exe.config
-C:\DColor Login\DColor\bin\roslyn\vbc.rsp
-C:\DColor Login\DColor\bin\roslyn\VBCSCompiler.exe
-C:\DColor Login\DColor\bin\roslyn\VBCSCompiler.exe.config
-C:\DColor Login\DColor\bin\Antlr3.Runtime.dll
-C:\DColor Login\DColor\bin\CaptchaMvc.dll
-C:\DColor Login\DColor\bin\EntityFramework.dll
-C:\DColor Login\DColor\bin\EntityFramework.SqlServer.dll
-C:\DColor Login\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\DColor Login\DColor\bin\Microsoft.Web.Infrastructure.dll
-C:\DColor Login\DColor\bin\Newtonsoft.Json.dll
-C:\DColor Login\DColor\bin\System.Data.SqlClient.dll
-C:\DColor Login\DColor\bin\System.Web.Helpers.dll
-C:\DColor Login\DColor\bin\System.Web.Mvc.dll
-C:\DColor Login\DColor\bin\System.Web.Optimization.dll
-C:\DColor Login\DColor\bin\System.Web.Razor.dll
-C:\DColor Login\DColor\bin\System.Web.WebPages.Deployment.dll
-C:\DColor Login\DColor\bin\System.Web.WebPages.dll
-C:\DColor Login\DColor\bin\System.Web.WebPages.Razor.dll
-C:\DColor Login\DColor\bin\WebGrease.dll
-C:\DColor Login\DColor\bin\CaptchaMvc.pdb
-C:\DColor Login\DColor\bin\CaptchaMvc.xml
-C:\DColor Login\DColor\bin\EntityFramework.xml
-C:\DColor Login\DColor\bin\EntityFramework.SqlServer.xml
-C:\DColor Login\DColor\bin\System.Data.SqlClient.xml
-C:\DColor Login\DColor\bin\System.Web.Helpers.xml
-C:\DColor Login\DColor\bin\System.Web.Mvc.xml
-C:\DColor Login\DColor\bin\System.Web.Optimization.xml
-C:\DColor Login\DColor\bin\System.Web.Razor.xml
-C:\DColor Login\DColor\bin\System.Web.WebPages.xml
-C:\DColor Login\DColor\bin\System.Web.WebPages.Deployment.xml
-C:\DColor Login\DColor\bin\System.Web.WebPages.Razor.xml
-C:\DColor Login\DColor\bin\Newtonsoft.Json.xml
-C:\DColor Login\DColor\bin\Antlr3.Runtime.pdb
-C:\DColor Login\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\DColor Login\DColor\obj\Debug\DColor.csproj.CopyComplete
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\obj\Debug\DColor.csproj.AssemblyReference.cache
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\obj\Debug\DColor.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\obj\Debug\DColor.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\obj\Debug\DColor.pdb
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\DColor.dll.config
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\DColor.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\DColor.pdb
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csc.exe
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csc.exe.config
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csc.rsp
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csi.exe
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csi.exe.config
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\csi.rsp
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.AppContext.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Console.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.IO.Compression.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Net.Http.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.ValueTuple.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\vbc.exe
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\vbc.exe.config
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\vbc.rsp
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\VBCSCompiler.exe
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Antlr3.Runtime.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\EntityFramework.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\EntityFramework.SqlServer.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Newtonsoft.Json.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Helpers.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Mvc.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Optimization.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Razor.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.Razor.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\WebGrease.dll
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\EntityFramework.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\EntityFramework.SqlServer.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Helpers.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Mvc.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Optimization.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.Razor.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\System.Web.WebPages.Razor.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Newtonsoft.Json.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Antlr3.Runtime.pdb
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Andres\Desktop\Diseño y desarrollo de sistemas III C 2022\Proyecto\Codigo\DColor\obj\Debug\DColor.csproj.CopyComplete

@@ -1,0 +1,51 @@
+﻿@{
+
+    @model IEnumerable<DColor.Empleado>
+}
+
+@{
+    ViewBag.Title = "Reporte Empleados";
+    Layout = null;
+}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<center><img class="mx-auto d-block" src="https://scontent.fsyq1-1.fna.fbcdn.net/v/t1.6435-9/177819529_110727177824339_7796098291937840443_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=j3k_c_wSO0wAX_BOTfF&_nc_ht=scontent.fsyq1-1.fna&oh=00_AT9L9J5SLN0dJQ3ZK7191kYUw409Q82EeGvehvNhkd4kZA&oe=636F09C2" alt="" width="200" height="200" /></center>
+<h2><em><strong>Reporte General de todos los Empleados</strong></em></h2>
+
+<br>
+<table class="table table-striped">
+
+    <thead>
+
+        <tr class="bg-primary">
+
+            <th>Rol</th>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Estado</th>
+        </tr>
+
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td> @item.Rol.nombre</td>
+                <td> @item.cedula </td>
+                <td> @item.nombre </td>
+                <td> @item.apellido</td>
+                <td> @item.telefono </td>
+                <td> @item.correo </td>
+                <td> @item.Estado_Empleado.estadoEmpleado</td>
+            </tr>
+        </tbody>
+    }
+
+</table>
+

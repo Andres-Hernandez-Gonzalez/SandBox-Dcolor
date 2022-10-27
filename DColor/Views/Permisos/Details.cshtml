@@ -1,0 +1,34 @@
+﻿@model DColor.DB.Rol_Operacion
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Rol_Operacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Operacione.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operacione.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

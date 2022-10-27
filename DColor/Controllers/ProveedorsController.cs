@@ -6,14 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using DColor;
 using DColor.DB;
 
 namespace DColor.Controllers
 {
     public class ProveedorsController : Controller
     {
-        private DB.DColorEntities db = new DB.DColorEntities();
+        private DColorEntities db = new DColorEntities();
 
         // GET: Proveedors
         public ActionResult Index()

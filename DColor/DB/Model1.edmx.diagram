@@ -4,37 +4,37 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b08204cd48f347e38fa847ca14536092" Name="Diagram1" ZoomLevel="47">
-        <EntityTypeShape EntityType="DColorModel.Bitacora" Width="1.5" PointX="0.75" PointY="7.875" />
-        <EntityTypeShape EntityType="DColorModel.Cliente" Width="1.5" PointX="6" PointY="8.125" />
-        <EntityTypeShape EntityType="DColorModel.Empleado" Width="1.5" PointX="3" PointY="2.625" />
-        <EntityTypeShape EntityType="DColorModel.Estado_Empleado" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DColorModel.Estado_Trabajo" Width="1.5" PointX="6" PointY="0.75" />
-        <EntityTypeShape EntityType="DColorModel.EstadoCliente" Width="1.5" PointX="3.75" PointY="8.875" />
-        <EntityTypeShape EntityType="DColorModel.EstadoDePedido" Width="1.5" PointX="6" PointY="15.875" />
-        <EntityTypeShape EntityType="DColorModel.Insumo" Width="1.5" PointX="8.25" PointY="12.25" />
-        <EntityTypeShape EntityType="DColorModel.Materiales_Trabajo" Width="1.5" PointX="10.5" PointY="3.125" />
-        <EntityTypeShape EntityType="DColorModel.Modulo" Width="1.5" PointX="1.5" PointY="11.75" />
-        <EntityTypeShape EntityType="DColorModel.Operacione" Width="1.5" PointX="3.75" PointY="11.5" />
-        <EntityTypeShape EntityType="DColorModel.Pedido" Width="1.5" PointX="8.25" PointY="8.25" />
-        <EntityTypeShape EntityType="DColorModel.ProductoTerminado" Width="1.5" PointX="8.25" PointY="3" />
-        <EntityTypeShape EntityType="DColorModel.Proveedor" Width="1.5" PointX="6" PointY="12.375" />
-        <EntityTypeShape EntityType="DColorModel.Rol" Width="1.5" PointX="0.75" PointY="3.625" />
-        <EntityTypeShape EntityType="DColorModel.Rol_Operacion" Width="1.5" PointX="6" PointY="3.5" />
-        <AssociationConnector Association="DColorModel.FK_Clientes_EstadoCliente" />
-        <AssociationConnector Association="DColorModel.FK_Pedidos_Clientes" />
-        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Clientes" />
-        <AssociationConnector Association="DColorModel.FK_Empleado_Estado_Empleado" />
-        <AssociationConnector Association="DColorModel.FK_Empleado_Rol" />
-        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Empleado" />
-        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Estado_Trabajo" />
-        <AssociationConnector Association="DColorModel.FK_Pedidos_EstadoDePedido" />
-        <AssociationConnector Association="DColorModel.FK_Insumos_Proveedor" />
-        <AssociationConnector Association="DColorModel.FK_Materiales_Trabajo_Insumos" />
-        <AssociationConnector Association="DColorModel.FK_Materiales_Trabajo_ProductoTerminado" />
-        <AssociationConnector Association="DColorModel.FK_Operaciones_Modulo" />
-        <AssociationConnector Association="DColorModel.FK_Rol_Operacion_Operaciones" />
-        <AssociationConnector Association="DColorModel.FK_Rol_Operacion_Rol" />
+      <Diagram DiagramId="b08204cd48f347e38fa847ca14536092" Name="Diagram1">
+        <EntityTypeShape EntityType="DColorModel.Bitacora" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Cliente" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Empleado" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Estado_Empleado" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Estado_Trabajo" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.EstadoCliente" Width="1.5" PointX="3.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.EstadoDePedido" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Insumo" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Materiales_Trabajo" Width="1.5" PointX="10.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Modulo" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Operacione" Width="1.5" PointX="3.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Pedido" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.ProductoTerminado" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Proveedor" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Rol" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DColorModel.Rol_Operacion" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="DColorModel.FK_Clientes_EstadoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Pedidos_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Empleado_Estado_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Empleado_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_ProductoTerminado_Estado_Trabajo" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Pedidos_EstadoDePedido" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Insumos_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Materiales_Trabajo_Insumos" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Materiales_Trabajo_ProductoTerminado" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Operaciones_Modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Rol_Operacion_Operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="DColorModel.FK_Rol_Operacion_Rol" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,0 +1,33 @@
+﻿@model DColor.DB.Rol
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Rol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+    </dl>
+</div>
+
+<div>
+    @{
+        Html.RenderPartial("parcialGetListaPermisos", Model.Rol_Operacion);
+    }
+</div>
+
+<p>
+    @Html.ActionLink("Modificar", "Edit", new { id = Model.idRol }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

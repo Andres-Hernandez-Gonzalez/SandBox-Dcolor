@@ -1,79 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DColorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="DColorEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Bitacoras" EntityType="DColorModel.Bitacora" />
-    <EntitySet Name="Clientes" EntityType="DColorModel.Cliente" />
-    <EntitySet Name="Empleadoes" EntityType="DColorModel.Empleado" />
-    <EntitySet Name="Estado_Empleadoes" EntityType="DColorModel.Estado_Empleado" />
-    <EntitySet Name="Estado_Trabajoes" EntityType="DColorModel.Estado_Trabajo" />
-    <EntitySet Name="EstadoClientes" EntityType="DColorModel.EstadoCliente" />
-    <EntitySet Name="EstadoDePedidoes" EntityType="DColorModel.EstadoDePedido" />
-    <EntitySet Name="Insumos" EntityType="DColorModel.Insumo" />
-    <EntitySet Name="Materiales_Trabajoes" EntityType="DColorModel.Materiales_Trabajo" />
-    <EntitySet Name="Moduloes" EntityType="DColorModel.Modulo" />
-    <EntitySet Name="Operaciones" EntityType="DColorModel.Operacione" />
-    <EntitySet Name="Pedidos" EntityType="DColorModel.Pedido" />
-    <EntitySet Name="ProductoTerminadoes" EntityType="DColorModel.ProductoTerminado" />
-    <EntitySet Name="Proveedors" EntityType="DColorModel.Proveedor" />
-    <EntitySet Name="Rols" EntityType="DColorModel.Rol" />
-    <EntitySet Name="Rol_Operacions" EntityType="DColorModel.Rol_Operacion" />
-    <AssociationSet Name="FK_Clientes_EstadoCliente" Association="DColorModel.FK_Clientes_EstadoCliente">
-      <End Role="EstadoCliente" EntitySet="EstadoClientes" />
-      <End Role="Cliente" EntitySet="Clientes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Pedidos_Clientes" Association="DColorModel.FK_Pedidos_Clientes">
-      <End Role="Cliente" EntitySet="Clientes" />
-      <End Role="Pedido" EntitySet="Pedidos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ProductoTerminado_Clientes" Association="DColorModel.FK_ProductoTerminado_Clientes">
-      <End Role="Cliente" EntitySet="Clientes" />
-      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Empleado_Estado_Empleado" Association="DColorModel.FK_Empleado_Estado_Empleado">
-      <End Role="Estado_Empleado" EntitySet="Estado_Empleadoes" />
-      <End Role="Empleado" EntitySet="Empleadoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Empleado_Rol" Association="DColorModel.FK_Empleado_Rol">
-      <End Role="Rol" EntitySet="Rols" />
-      <End Role="Empleado" EntitySet="Empleadoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ProductoTerminado_Empleado" Association="DColorModel.FK_ProductoTerminado_Empleado">
-      <End Role="Empleado" EntitySet="Empleadoes" />
-      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ProductoTerminado_Estado_Trabajo" Association="DColorModel.FK_ProductoTerminado_Estado_Trabajo">
-      <End Role="Estado_Trabajo" EntitySet="Estado_Trabajoes" />
-      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Pedidos_EstadoDePedido" Association="DColorModel.FK_Pedidos_EstadoDePedido">
-      <End Role="EstadoDePedido" EntitySet="EstadoDePedidoes" />
-      <End Role="Pedido" EntitySet="Pedidos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Insumos_Proveedor" Association="DColorModel.FK_Insumos_Proveedor">
-      <End Role="Proveedor" EntitySet="Proveedors" />
-      <End Role="Insumo" EntitySet="Insumos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Materiales_Trabajo_Insumos" Association="DColorModel.FK_Materiales_Trabajo_Insumos">
-      <End Role="Insumo" EntitySet="Insumos" />
-      <End Role="Materiales_Trabajo" EntitySet="Materiales_Trabajoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Materiales_Trabajo_ProductoTerminado" Association="DColorModel.FK_Materiales_Trabajo_ProductoTerminado">
-      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
-      <End Role="Materiales_Trabajo" EntitySet="Materiales_Trabajoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Operaciones_Modulo" Association="DColorModel.FK_Operaciones_Modulo">
-      <End Role="Modulo" EntitySet="Moduloes" />
-      <End Role="Operacione" EntitySet="Operaciones" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Rol_Operacion_Operaciones" Association="DColorModel.FK_Rol_Operacion_Operaciones">
-      <End Role="Operacione" EntitySet="Operaciones" />
-      <End Role="Rol_Operacion" EntitySet="Rol_Operacions" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Rol_Operacion_Rol" Association="DColorModel.FK_Rol_Operacion_Rol">
-      <End Role="Rol" EntitySet="Rols" />
-      <End Role="Rol_Operacion" EntitySet="Rol_Operacions" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="Bitacora">
     <Key>
       <PropertyRef Name="idRegistro" />
@@ -94,9 +20,9 @@
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idEstadoCliente" Type="Int32" />
-    <NavigationProperty Name="EstadoCliente" Relationship="DColorModel.FK_Clientes_EstadoCliente" FromRole="Cliente" ToRole="EstadoCliente" />
-    <NavigationProperty Name="Pedidos" Relationship="DColorModel.FK_Pedidos_Clientes" FromRole="Cliente" ToRole="Pedido" />
-    <NavigationProperty Name="ProductoTerminadoes" Relationship="DColorModel.FK_ProductoTerminado_Clientes" FromRole="Cliente" ToRole="ProductoTerminado" />
+    <NavigationProperty Name="EstadoCliente" Relationship="Self.FK_Clientes_EstadoCliente" FromRole="Clientes" ToRole="EstadoCliente" />
+    <NavigationProperty Name="Pedidos" Relationship="Self.FK_Pedidos_Clientes" FromRole="Clientes" ToRole="Pedidos" />
+    <NavigationProperty Name="ProductoTerminadoes" Relationship="Self.FK_ProductoTerminado_Clientes" FromRole="Clientes" ToRole="ProductoTerminado" />
   </EntityType>
   <EntityType Name="Empleado">
     <Key>
@@ -114,9 +40,9 @@
     <Property Name="telefono" Type="Int32" />
     <Property Name="intentos" Type="Int32" />
     <Property Name="ultimoIntento" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Estado_Empleado" Relationship="DColorModel.FK_Empleado_Estado_Empleado" FromRole="Empleado" ToRole="Estado_Empleado" />
-    <NavigationProperty Name="Rol" Relationship="DColorModel.FK_Empleado_Rol" FromRole="Empleado" ToRole="Rol" />
-    <NavigationProperty Name="ProductoTerminadoes" Relationship="DColorModel.FK_ProductoTerminado_Empleado" FromRole="Empleado" ToRole="ProductoTerminado" />
+    <NavigationProperty Name="Estado_Empleado" Relationship="Self.FK_Empleado_Estado_Empleado" FromRole="Empleado" ToRole="Estado_Empleado" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_Empleado_Rol" FromRole="Empleado" ToRole="Rol" />
+    <NavigationProperty Name="ProductoTerminadoes" Relationship="Self.FK_ProductoTerminado_Empleado" FromRole="Empleado" ToRole="ProductoTerminado" />
   </EntityType>
   <EntityType Name="Estado_Empleado">
     <Key>
@@ -124,7 +50,7 @@
     </Key>
     <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="estadoEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Empleadoes" Relationship="DColorModel.FK_Empleado_Estado_Empleado" FromRole="Estado_Empleado" ToRole="Empleado" />
+    <NavigationProperty Name="Empleadoes" Relationship="Self.FK_Empleado_Estado_Empleado" FromRole="Estado_Empleado" ToRole="Empleado" />
   </EntityType>
   <EntityType Name="Estado_Trabajo">
     <Key>
@@ -132,7 +58,7 @@
     </Key>
     <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="estadoProductoTerminado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="ProductoTerminadoes" Relationship="DColorModel.FK_ProductoTerminado_Estado_Trabajo" FromRole="Estado_Trabajo" ToRole="ProductoTerminado" />
+    <NavigationProperty Name="ProductoTerminadoes" Relationship="Self.FK_ProductoTerminado_Estado_Trabajo" FromRole="Estado_Trabajo" ToRole="ProductoTerminado" />
   </EntityType>
   <EntityType Name="EstadoCliente">
     <Key>
@@ -140,7 +66,7 @@
     </Key>
     <Property Name="idEstadoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="estadoCliente1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Clientes" Relationship="DColorModel.FK_Clientes_EstadoCliente" FromRole="EstadoCliente" ToRole="Cliente" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Clientes_EstadoCliente" FromRole="EstadoCliente" ToRole="Clientes" />
   </EntityType>
   <EntityType Name="EstadoDePedido">
     <Key>
@@ -148,7 +74,7 @@
     </Key>
     <Property Name="idEstadoPedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="estadoDePedido1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Pedidos" Relationship="DColorModel.FK_Pedidos_EstadoDePedido" FromRole="EstadoDePedido" ToRole="Pedido" />
+    <NavigationProperty Name="Pedidos" Relationship="Self.FK_Pedidos_EstadoDePedido" FromRole="EstadoDePedido" ToRole="Pedidos" />
   </EntityType>
   <EntityType Name="Insumo">
     <Key>
@@ -160,8 +86,8 @@
     <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="cantidad" Type="Int32" />
     <Property Name="precio" Type="Int32" />
-    <NavigationProperty Name="Proveedor" Relationship="DColorModel.FK_Insumos_Proveedor" FromRole="Insumo" ToRole="Proveedor" />
-    <NavigationProperty Name="Materiales_Trabajo" Relationship="DColorModel.FK_Materiales_Trabajo_Insumos" FromRole="Insumo" ToRole="Materiales_Trabajo" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Insumos_Proveedor" FromRole="Insumos" ToRole="Proveedor" />
+    <NavigationProperty Name="Materiales_Trabajo" Relationship="Self.FK_Materiales_Trabajo_Insumos" FromRole="Insumos" ToRole="Materiales_Trabajo" />
   </EntityType>
   <EntityType Name="Materiales_Trabajo">
     <Key>
@@ -175,8 +101,8 @@
     <Property Name="nombreProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="nombreEmpleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="fecha" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Insumo" Relationship="DColorModel.FK_Materiales_Trabajo_Insumos" FromRole="Materiales_Trabajo" ToRole="Insumo" />
-    <NavigationProperty Name="ProductoTerminado" Relationship="DColorModel.FK_Materiales_Trabajo_ProductoTerminado" FromRole="Materiales_Trabajo" ToRole="ProductoTerminado" />
+    <NavigationProperty Name="Insumo" Relationship="Self.FK_Materiales_Trabajo_Insumos" FromRole="Materiales_Trabajo" ToRole="Insumos" />
+    <NavigationProperty Name="ProductoTerminado" Relationship="Self.FK_Materiales_Trabajo_ProductoTerminado" FromRole="Materiales_Trabajo" ToRole="ProductoTerminado" />
   </EntityType>
   <EntityType Name="Modulo">
     <Key>
@@ -184,7 +110,7 @@
     </Key>
     <Property Name="idModulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Operaciones" Relationship="DColorModel.FK_Operaciones_Modulo" FromRole="Modulo" ToRole="Operacione" />
+    <NavigationProperty Name="Operaciones" Relationship="Self.FK_Operaciones_Modulo" FromRole="Modulo" ToRole="Operaciones" />
   </EntityType>
   <EntityType Name="Operacione">
     <Key>
@@ -193,8 +119,8 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idModulo" Type="Int32" />
-    <NavigationProperty Name="Modulo" Relationship="DColorModel.FK_Operaciones_Modulo" FromRole="Operacione" ToRole="Modulo" />
-    <NavigationProperty Name="Rol_Operacion" Relationship="DColorModel.FK_Rol_Operacion_Operaciones" FromRole="Operacione" ToRole="Rol_Operacion" />
+    <NavigationProperty Name="Modulo" Relationship="Self.FK_Operaciones_Modulo" FromRole="Operaciones" ToRole="Modulo" />
+    <NavigationProperty Name="Rol_Operacion" Relationship="Self.FK_Rol_Operacion_Operaciones" FromRole="Operaciones" ToRole="Rol_Operacion" />
   </EntityType>
   <EntityType Name="Pedido">
     <Key>
@@ -208,8 +134,8 @@
     <Property Name="idEstadoPedido" Type="Int32" />
     <Property Name="idProducto" Type="Int32" />
     <Property Name="horaEntregaPedido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Cliente" Relationship="DColorModel.FK_Pedidos_Clientes" FromRole="Pedido" ToRole="Cliente" />
-    <NavigationProperty Name="EstadoDePedido" Relationship="DColorModel.FK_Pedidos_EstadoDePedido" FromRole="Pedido" ToRole="EstadoDePedido" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Pedidos_Clientes" FromRole="Pedidos" ToRole="Clientes" />
+    <NavigationProperty Name="EstadoDePedido" Relationship="Self.FK_Pedidos_EstadoDePedido" FromRole="Pedidos" ToRole="EstadoDePedido" />
   </EntityType>
   <EntityType Name="ProductoTerminado">
     <Key>
@@ -222,10 +148,10 @@
     <Property Name="fecha" Type="DateTime" Precision="3" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="idCliente" Type="Int32" />
-    <NavigationProperty Name="Cliente" Relationship="DColorModel.FK_ProductoTerminado_Clientes" FromRole="ProductoTerminado" ToRole="Cliente" />
-    <NavigationProperty Name="Empleado" Relationship="DColorModel.FK_ProductoTerminado_Empleado" FromRole="ProductoTerminado" ToRole="Empleado" />
-    <NavigationProperty Name="Estado_Trabajo" Relationship="DColorModel.FK_ProductoTerminado_Estado_Trabajo" FromRole="ProductoTerminado" ToRole="Estado_Trabajo" />
-    <NavigationProperty Name="Materiales_Trabajo" Relationship="DColorModel.FK_Materiales_Trabajo_ProductoTerminado" FromRole="ProductoTerminado" ToRole="Materiales_Trabajo" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_ProductoTerminado_Clientes" FromRole="ProductoTerminado" ToRole="Clientes" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FK_ProductoTerminado_Empleado" FromRole="ProductoTerminado" ToRole="Empleado" />
+    <NavigationProperty Name="Estado_Trabajo" Relationship="Self.FK_ProductoTerminado_Estado_Trabajo" FromRole="ProductoTerminado" ToRole="Estado_Trabajo" />
+    <NavigationProperty Name="Materiales_Trabajo" Relationship="Self.FK_Materiales_Trabajo_ProductoTerminado" FromRole="ProductoTerminado" ToRole="Materiales_Trabajo" />
   </EntityType>
   <EntityType Name="Proveedor">
     <Key>
@@ -237,7 +163,7 @@
     <Property Name="telefono" Type="Int32" />
     <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Insumos" Relationship="DColorModel.FK_Insumos_Proveedor" FromRole="Proveedor" ToRole="Insumo" />
+    <NavigationProperty Name="Insumos" Relationship="Self.FK_Insumos_Proveedor" FromRole="Proveedor" ToRole="Insumos" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -245,8 +171,8 @@
     </Key>
     <Property Name="idRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Empleadoes" Relationship="DColorModel.FK_Empleado_Rol" FromRole="Rol" ToRole="Empleado" />
-    <NavigationProperty Name="Rol_Operacion" Relationship="DColorModel.FK_Rol_Operacion_Rol" FromRole="Rol" ToRole="Rol_Operacion" />
+    <NavigationProperty Name="Empleadoes" Relationship="Self.FK_Empleado_Rol" FromRole="Rol" ToRole="Empleado" />
+    <NavigationProperty Name="Rol_Operacion" Relationship="Self.FK_Rol_Operacion_Rol" FromRole="Rol" ToRole="Rol_Operacion" />
   </EntityType>
   <EntityType Name="Rol_Operacion">
     <Key>
@@ -255,38 +181,38 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idRol" Type="Int32" />
     <Property Name="idOperacion" Type="Int32" />
-    <NavigationProperty Name="Operacione" Relationship="DColorModel.FK_Rol_Operacion_Operaciones" FromRole="Rol_Operacion" ToRole="Operacione" />
-    <NavigationProperty Name="Rol" Relationship="DColorModel.FK_Rol_Operacion_Rol" FromRole="Rol_Operacion" ToRole="Rol" />
+    <NavigationProperty Name="Operacione" Relationship="Self.FK_Rol_Operacion_Operaciones" FromRole="Rol_Operacion" ToRole="Operaciones" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_Rol_Operacion_Rol" FromRole="Rol_Operacion" ToRole="Rol" />
   </EntityType>
   <Association Name="FK_Clientes_EstadoCliente">
-    <End Type="DColorModel.EstadoCliente" Role="EstadoCliente" Multiplicity="0..1" />
-    <End Type="DColorModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <End Role="EstadoCliente" Type="Self.EstadoCliente" Multiplicity="0..1" />
+    <End Role="Clientes" Type="Self.Cliente" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="EstadoCliente">
         <PropertyRef Name="idEstadoCliente" />
       </Principal>
-      <Dependent Role="Cliente">
+      <Dependent Role="Clientes">
         <PropertyRef Name="idEstadoCliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Pedidos_Clientes">
-    <End Type="DColorModel.Cliente" Role="Cliente" Multiplicity="0..1" />
-    <End Type="DColorModel.Pedido" Role="Pedido" Multiplicity="*" />
+    <End Role="Clientes" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Pedidos" Type="Self.Pedido" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Cliente">
+      <Principal Role="Clientes">
         <PropertyRef Name="idCliente" />
       </Principal>
-      <Dependent Role="Pedido">
+      <Dependent Role="Pedidos">
         <PropertyRef Name="idCliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ProductoTerminado_Clientes">
-    <End Type="DColorModel.Cliente" Role="Cliente" Multiplicity="0..1" />
-    <End Type="DColorModel.ProductoTerminado" Role="ProductoTerminado" Multiplicity="*" />
+    <End Role="Clientes" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="ProductoTerminado" Type="Self.ProductoTerminado" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Cliente">
+      <Principal Role="Clientes">
         <PropertyRef Name="idCliente" />
       </Principal>
       <Dependent Role="ProductoTerminado">
@@ -295,8 +221,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Empleado_Estado_Empleado">
-    <End Type="DColorModel.Estado_Empleado" Role="Estado_Empleado" Multiplicity="0..1" />
-    <End Type="DColorModel.Empleado" Role="Empleado" Multiplicity="*" />
+    <End Role="Estado_Empleado" Type="Self.Estado_Empleado" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estado_Empleado">
         <PropertyRef Name="idEstado" />
@@ -307,8 +233,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Empleado_Rol">
-    <End Type="DColorModel.Rol" Role="Rol" Multiplicity="0..1" />
-    <End Type="DColorModel.Empleado" Role="Empleado" Multiplicity="*" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rol">
         <PropertyRef Name="idRol" />
@@ -319,8 +245,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ProductoTerminado_Empleado">
-    <End Type="DColorModel.Empleado" Role="Empleado" Multiplicity="0..1" />
-    <End Type="DColorModel.ProductoTerminado" Role="ProductoTerminado" Multiplicity="*" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="ProductoTerminado" Type="Self.ProductoTerminado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
         <PropertyRef Name="idEmpleado" />
@@ -331,8 +257,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ProductoTerminado_Estado_Trabajo">
-    <End Type="DColorModel.Estado_Trabajo" Role="Estado_Trabajo" Multiplicity="0..1" />
-    <End Type="DColorModel.ProductoTerminado" Role="ProductoTerminado" Multiplicity="*" />
+    <End Role="Estado_Trabajo" Type="Self.Estado_Trabajo" Multiplicity="0..1" />
+    <End Role="ProductoTerminado" Type="Self.ProductoTerminado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estado_Trabajo">
         <PropertyRef Name="idEstado" />
@@ -343,34 +269,34 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Pedidos_EstadoDePedido">
-    <End Type="DColorModel.EstadoDePedido" Role="EstadoDePedido" Multiplicity="0..1" />
-    <End Type="DColorModel.Pedido" Role="Pedido" Multiplicity="*" />
+    <End Role="EstadoDePedido" Type="Self.EstadoDePedido" Multiplicity="0..1" />
+    <End Role="Pedidos" Type="Self.Pedido" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="EstadoDePedido">
         <PropertyRef Name="idEstadoPedido" />
       </Principal>
-      <Dependent Role="Pedido">
+      <Dependent Role="Pedidos">
         <PropertyRef Name="idEstadoPedido" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Insumos_Proveedor">
-    <End Type="DColorModel.Proveedor" Role="Proveedor" Multiplicity="0..1" />
-    <End Type="DColorModel.Insumo" Role="Insumo" Multiplicity="*" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="0..1" />
+    <End Role="Insumos" Type="Self.Insumo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Proveedor">
         <PropertyRef Name="idProveedor" />
       </Principal>
-      <Dependent Role="Insumo">
+      <Dependent Role="Insumos">
         <PropertyRef Name="idProveedor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Materiales_Trabajo_Insumos">
-    <End Type="DColorModel.Insumo" Role="Insumo" Multiplicity="0..1" />
-    <End Type="DColorModel.Materiales_Trabajo" Role="Materiales_Trabajo" Multiplicity="*" />
+    <End Role="Insumos" Type="Self.Insumo" Multiplicity="0..1" />
+    <End Role="Materiales_Trabajo" Type="Self.Materiales_Trabajo" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Insumo">
+      <Principal Role="Insumos">
         <PropertyRef Name="idProducto" />
       </Principal>
       <Dependent Role="Materiales_Trabajo">
@@ -379,8 +305,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Materiales_Trabajo_ProductoTerminado">
-    <End Type="DColorModel.ProductoTerminado" Role="ProductoTerminado" Multiplicity="0..1" />
-    <End Type="DColorModel.Materiales_Trabajo" Role="Materiales_Trabajo" Multiplicity="*" />
+    <End Role="ProductoTerminado" Type="Self.ProductoTerminado" Multiplicity="0..1" />
+    <End Role="Materiales_Trabajo" Type="Self.Materiales_Trabajo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ProductoTerminado">
         <PropertyRef Name="idProductoTerminado" />
@@ -391,22 +317,22 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Operaciones_Modulo">
-    <End Type="DColorModel.Modulo" Role="Modulo" Multiplicity="0..1" />
-    <End Type="DColorModel.Operacione" Role="Operacione" Multiplicity="*" />
+    <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
+    <End Role="Operaciones" Type="Self.Operacione" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Modulo">
         <PropertyRef Name="idModulo" />
       </Principal>
-      <Dependent Role="Operacione">
+      <Dependent Role="Operaciones">
         <PropertyRef Name="idModulo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rol_Operacion_Operaciones">
-    <End Type="DColorModel.Operacione" Role="Operacione" Multiplicity="0..1" />
-    <End Type="DColorModel.Rol_Operacion" Role="Rol_Operacion" Multiplicity="*" />
+    <End Role="Operaciones" Type="Self.Operacione" Multiplicity="0..1" />
+    <End Role="Rol_Operacion" Type="Self.Rol_Operacion" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Operacione">
+      <Principal Role="Operaciones">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Rol_Operacion">
@@ -415,8 +341,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rol_Operacion_Rol">
-    <End Type="DColorModel.Rol" Role="Rol" Multiplicity="0..1" />
-    <End Type="DColorModel.Rol_Operacion" Role="Rol_Operacion" Multiplicity="*" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Rol_Operacion" Type="Self.Rol_Operacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rol">
         <PropertyRef Name="idRol" />
@@ -426,4 +352,78 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="DColorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bitacoras" EntityType="Self.Bitacora" />
+    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+    <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
+    <EntitySet Name="Estado_Empleadoes" EntityType="Self.Estado_Empleado" />
+    <EntitySet Name="Estado_Trabajoes" EntityType="Self.Estado_Trabajo" />
+    <EntitySet Name="EstadoClientes" EntityType="Self.EstadoCliente" />
+    <EntitySet Name="EstadoDePedidoes" EntityType="Self.EstadoDePedido" />
+    <EntitySet Name="Insumos" EntityType="Self.Insumo" />
+    <EntitySet Name="Materiales_Trabajoes" EntityType="Self.Materiales_Trabajo" />
+    <EntitySet Name="Moduloes" EntityType="Self.Modulo" />
+    <EntitySet Name="Operaciones" EntityType="Self.Operacione" />
+    <EntitySet Name="Pedidos" EntityType="Self.Pedido" />
+    <EntitySet Name="ProductoTerminadoes" EntityType="Self.ProductoTerminado" />
+    <EntitySet Name="Proveedors" EntityType="Self.Proveedor" />
+    <EntitySet Name="Rols" EntityType="Self.Rol" />
+    <EntitySet Name="Rol_Operacions" EntityType="Self.Rol_Operacion" />
+    <AssociationSet Name="FK_Clientes_EstadoCliente" Association="Self.FK_Clientes_EstadoCliente">
+      <End Role="EstadoCliente" EntitySet="EstadoClientes" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedidos_Clientes" Association="Self.FK_Pedidos_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Pedidos" EntitySet="Pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoTerminado_Clientes" Association="Self.FK_ProductoTerminado_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empleado_Estado_Empleado" Association="Self.FK_Empleado_Estado_Empleado">
+      <End Role="Estado_Empleado" EntitySet="Estado_Empleadoes" />
+      <End Role="Empleado" EntitySet="Empleadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empleado_Rol" Association="Self.FK_Empleado_Rol">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="Empleado" EntitySet="Empleadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoTerminado_Empleado" Association="Self.FK_ProductoTerminado_Empleado">
+      <End Role="Empleado" EntitySet="Empleadoes" />
+      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoTerminado_Estado_Trabajo" Association="Self.FK_ProductoTerminado_Estado_Trabajo">
+      <End Role="Estado_Trabajo" EntitySet="Estado_Trabajoes" />
+      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedidos_EstadoDePedido" Association="Self.FK_Pedidos_EstadoDePedido">
+      <End Role="EstadoDePedido" EntitySet="EstadoDePedidoes" />
+      <End Role="Pedidos" EntitySet="Pedidos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Insumos_Proveedor" Association="Self.FK_Insumos_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedors" />
+      <End Role="Insumos" EntitySet="Insumos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Materiales_Trabajo_Insumos" Association="Self.FK_Materiales_Trabajo_Insumos">
+      <End Role="Insumos" EntitySet="Insumos" />
+      <End Role="Materiales_Trabajo" EntitySet="Materiales_Trabajoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Materiales_Trabajo_ProductoTerminado" Association="Self.FK_Materiales_Trabajo_ProductoTerminado">
+      <End Role="ProductoTerminado" EntitySet="ProductoTerminadoes" />
+      <End Role="Materiales_Trabajo" EntitySet="Materiales_Trabajoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Modulo" Association="Self.FK_Operaciones_Modulo">
+      <End Role="Modulo" EntitySet="Moduloes" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Operacion_Operaciones" Association="Self.FK_Rol_Operacion_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="Rol_Operacion" EntitySet="Rol_Operacions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Operacion_Rol" Association="Self.FK_Rol_Operacion_Rol">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="Rol_Operacion" EntitySet="Rol_Operacions" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

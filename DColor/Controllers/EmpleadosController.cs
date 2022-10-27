@@ -6,14 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using DColor;
 using DColor.DB;
+//using Rotativa;
 
 namespace DColor.Controllers
 {
     public class EmpleadosController : Controller
     {
-        private DB.DColorEntities db = new DB.DColorEntities();
+        private DColorEntities db = new DColorEntities();
 
         // GET: Empleadoes
         public ActionResult Index()
@@ -133,5 +133,16 @@ namespace DColor.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ReportePdf()
+        {
+            var empleadoes = db.Empleadoes.Include(e => e.Estado_Empleado).Include(e => e.Rol);
+            return View(empleadoes);
+        }
+
+        //public ActionResult Print()
+        //{
+        //    return new ActionAsPdf("ReportePdf") { FileName = "Reporte General de Empleados" };
+        //}
     }
 }
