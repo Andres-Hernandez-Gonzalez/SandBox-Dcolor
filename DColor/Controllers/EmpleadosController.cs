@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
+using ClosedXML.Excel;
 using DColor.DB;
-//using Rotativa;
+using Rotativa;
 
 namespace DColor.Controllers
 {
@@ -140,9 +139,41 @@ namespace DColor.Controllers
             return View(empleadoes);
         }
 
-        //public ActionResult Print()
-        //{
-        //    return new ActionAsPdf("ReportePdf") { FileName = "Reporte General de Empleados" };
-        //}
+        public ActionResult Print()
+        {
+            return new ActionAsPdf("ReportePdf") { FileName = "Reporte General de Empleados" };
+        }
+
+
+        [HttpPost]
+        public FileResult GenerarExcel()
+        {
+            DColorEntities entities = new DColorEntities();
+            DataTable dt = new DataTable("Reporte General de Empleados");
+            dt.Columns.AddRange(new DataColumn[7] { new DataColumn("Rol Empleado"),
+                                            new DataColumn("Cedula"),
+                                            new DataColumn("Nombre"),
+                                            new DataColumn("Apellidos"),
+                                            new DataColumn("Telefono"),
+                                            new DataColumn("Correo"),
+                                            new DataColumn("Estado Empleado") });
+
+            var empleadoes = db.Empleadoes.Include(e => e.Estado_Empleado).Include(e => e.Rol);
+
+            foreach (var db in empleadoes)
+            {
+                dt.Rows.Add(db.Rol.nombre, db.cedula, db.nombre, db.apellido, db.telefono, db.correo, db.Estado_Empleado.estadoEmpleado);
+            }
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte General de Empleados.xlsx");
+                }
+            }
+        }
     }
 }

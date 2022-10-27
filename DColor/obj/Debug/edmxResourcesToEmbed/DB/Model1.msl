@@ -62,7 +62,7 @@
       <EntityTypeMapping TypeName="DColorModel.EstadoCliente">
         <MappingFragment StoreEntitySet="EstadoCliente">
           <ScalarProperty Name="idEstadoCliente" ColumnName="idEstadoCliente" />
-          <ScalarProperty Name="estadoCliente1" ColumnName="estadoCliente" />
+          <ScalarProperty Name="estadoCliente" ColumnName="estadoCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

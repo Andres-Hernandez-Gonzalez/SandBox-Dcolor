@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,14 +22,28 @@ namespace DColor.DB
             this.Pedidos = new HashSet<Pedido>();
             this.ProductoTerminadoes = new HashSet<ProductoTerminado>();
         }
-    
+        [Required(ErrorMessage = "El Id Cliente es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Cliente")]
         public int idCliente { get; set; }
+        [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre")]
         public string nombre { get; set; }
+        [Required(ErrorMessage = "Los Apellidos son obligatorios no se puede dejar espacios en blanco")]
+        [DisplayName("Apellidos")]
         public string apellidos { get; set; }
+        [Required(ErrorMessage = "La Direccion es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Direccion")]
         public string direccion { get; set; }
+        [Required(ErrorMessage = "El Telefono es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Telefono")]
         public Nullable<int> telefono { get; set; }
+        [Required(ErrorMessage = "El Correo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Correo")]
         public string correo { get; set; }
+        [Required(ErrorMessage = "La Cedula es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Cedula")]
         public string cedula { get; set; }
+        [DisplayName("Id EstadoCliente")]
         public Nullable<int> idEstadoCliente { get; set; }
     
         public virtual EstadoCliente EstadoCliente { get; set; }

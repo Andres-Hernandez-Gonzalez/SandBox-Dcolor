@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Estado_Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +21,11 @@ namespace DColor.DB
         {
             this.Empleadoes = new HashSet<Empleado>();
         }
-    
+        [Required(ErrorMessage = "El Id EstadoEmpleado es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id EstadoEmpleado")]
         public int idEstado { get; set; }
+        [Required(ErrorMessage = "El Estado Empleado es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Estado Empleado")]
         public string estadoEmpleado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

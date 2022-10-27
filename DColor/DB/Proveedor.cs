@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Proveedor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,11 +21,20 @@ namespace DColor.DB
         {
             this.Insumos = new HashSet<Insumo>();
         }
-    
+        [Required(ErrorMessage = "El Id Proveedor es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Proveedor")]
         public int idProveedor { get; set; }
+        [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre")]
         public string nombre { get; set; }
+        [Required(ErrorMessage = "La Direccion es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Direccion")]
         public string direccion { get; set; }
+        [Required(ErrorMessage = "El Telefono es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Telefono")]
         public Nullable<int> telefono { get; set; }
+        [Required(ErrorMessage = "El Correo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Correo")]
         public string correo { get; set; }
         public string apellidos { get; set; }
     

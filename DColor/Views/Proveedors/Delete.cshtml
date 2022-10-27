@@ -8,8 +8,8 @@
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3 bg-five">
-        <h6 class="m-0 font-weight-bold text-white">Eliminar un Proveedor</h6>
+    <div class="card-header py-3 bg-third">
+        <h6 class="m-0 font-weight-bold text-dark">Eliminar un Proveedor</h6>
     </div>
     <div class="card-body">
 
@@ -17,38 +17,38 @@
         {
             @Html.AntiForgeryToken()
 
-        <div class="row">
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.idProveedor)
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.nombre, "Nombre", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            <div class="row">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.idProveedor)
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.nombre, "Nombre", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.direccion, "Direccion", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.direccion, "Direccion", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control", @required = "required", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.telefono, "Telefono", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", maxlength = "8" } })
-                    @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.telefono, "Telefono", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", maxlength = "8", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.correo, "Correo", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.correo, "Correo", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control", @required = "required", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
                 <div class="col-12">
                     <div class="form-group">
                         <button type="submit" class="btn btn-danger" id="boton" formnovalidate>
@@ -59,9 +59,18 @@
                         </button>
                     </div>
                 </div>
-        </div>
+            </div>
         }
 
+        <div class="col-12" style=" margin: 0 180px; top: -53px;">
+            <form action="@Url.Action("Index","Proveedors")">
+                <button type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg> Cancelar
+                </button>
+            </form>
+        </div>
         <!-- DataTales Example -->
     </div>
 </div>

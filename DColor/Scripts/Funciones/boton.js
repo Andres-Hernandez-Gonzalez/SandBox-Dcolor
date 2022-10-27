@@ -15,7 +15,7 @@ function Habilitar() {
         desabilitar = true;//cambia el valor
 
     }
-    if (form.apellido.value == "") {
+    if (form.apellidos.value == "") {
         desabilitar = true;
 
     }
@@ -71,7 +71,7 @@ function HabilitarActua() {
         desabilitar = true;
 
     }
-    if (formA.apellido.value == "") {
+    if (formA.apellidos.value == "") {
         desabilitar = true;
 
     }
@@ -121,7 +121,7 @@ function HabilitarC() {
         desabilitar = true;//cambia el valor
 
     }
-    if (form.apellido.value == "") {
+    if (form.apellidos.value == "") {
         desabilitar = true;
 
     }
@@ -172,7 +172,7 @@ function HabilitarActuaC() {
         desabilitar = true;
 
     }
-    if (formA.apellido.value == "") {
+    if (formA.apellidos.value == "") {
         desabilitar = true;
 
     }
@@ -210,7 +210,7 @@ function HabilitarActuaC() {
 
 }
 
-function HabilitarR() {
+function HabilitarP() {
 
     let desabilitar = false;
 
@@ -218,23 +218,38 @@ function HabilitarR() {
         desabilitar = true;//cambia el valor
 
     }
+    if (form.correo.value == "") {
+        desabilitar = true;
+
+    }
+    if (form.direccion.value == "") {
+        desabilitar = true;
+
+    }
+
+    if (form.telefono.value == "") {
+        desabilitar = true;
+
+    }
 
     if (desabilitar == true) {
         boton.disabled = true;
-       
+
 
     }
     else {
         boton.disabled = false;
-       
+
 
     }
 
 }
 
-form.addEventListener("keyup", HabilitarR) //evento para verificar que el rol esta escribiendo
+form.addEventListener("keyup", HabilitarP) //evento para verificar que el proveedor esta escribiendo
 
-function HabilitarActuaR() {
+
+
+function HabilitarActuaP() {
 
     let desabilitar = false;
 
@@ -242,6 +257,20 @@ function HabilitarActuaR() {
         desabilitar = true;
 
     }
+    if (formA.correo.value == "") {
+        desabilitar = true;
+
+    }
+    if (formA.direccion.value == "") {
+        desabilitar = true;
+
+    }
+
+    if (formA.telefono.value == "") {
+        desabilitar = true;
+
+    }
+
     if (desabilitar == true) {
 
         botonActua.disabled = true;
@@ -252,7 +281,7 @@ function HabilitarActuaR() {
         botonActua.disabled = false;
 
     }
-    formA.addEventListener("keyup", HabilitarActuaR) //evento para verificar que el rol esta escribiendo
+    formA.addEventListener("keyup", HabilitarActuaP) //evento para verificar que el cliente esta escribiendo
 
 
 }

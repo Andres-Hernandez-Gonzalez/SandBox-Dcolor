@@ -8,7 +8,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3 bg-five">
-        <h6 class="m-0 font-weight-bold text-white">Eliminar un Empleado</h6>
+        <h6 class="m-0 font-weight-bold text-dark">Eliminar un Empleado</h6>
     </div>
     <div class="card-body">
 
@@ -16,66 +16,66 @@
         {
             @Html.AntiForgeryToken()
 
-        <div class="row">
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.idEmpleado)
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.idRol, "Rol Empleado", htmlAttributes: new { @class = "control-label" })
-                    @Html.DropDownList("idRol", null, htmlAttributes: new { @class = "form-control", @required = "required" })
-                    @Html.ValidationMessageFor(model => model.idRol, "", new { @class = "text-danger" })
+            <div class="row">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.idEmpleado)
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Rol.nombre, "Rol Empleado", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Rol.nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.Rol.nombre, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.cedula, "Cedula", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.cedula, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", @maxlength = "9" } })
-                    @Html.ValidationMessageFor(model => model.cedula, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.cedula, "Cedula", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.cedula, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", @maxlength = "9", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.cedula, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.nombre, "Nombre", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.nombre, "Nombre", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.apellido, "Apellidos", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.apellido, "Apellidos", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.apellido, new { htmlAttributes = new { @class = "form-control", onkeypress = "return SoloLetras(event)", @required = "required", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.apellido, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.telefono, "Telefono", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", maxlength = "8" } })
-                    @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.telefono, "Telefono", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control", onkeypress = "return isNumber(event)", @required = "required", maxlength = "8", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.correo, "Correo", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "email" } })
-                    @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.correo, "Correo", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "email", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.contraseña, "Contraseña", htmlAttributes: new { @class = "control-label" })
-                    @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "password", @maxlength = "10" } })
-                    @Html.ValidationMessageFor(model => model.contraseña, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.contraseña, "Contraseña", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "password", @maxlength = "20", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.contraseña, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    @Html.LabelFor(model => model.idEstado, "Estado Empleado", htmlAttributes: new { @class = "control-label" })
-                    @Html.DropDownList("idEstado", null, htmlAttributes: new { @class = "form-control", @required = "required" })
-                    @Html.ValidationMessageFor(model => model.idEstado, "", new { @class = "text-danger" })
+                <div class="col-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Estado_Empleado.estadoEmpleado, "Estado Empleado", htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Estado_Empleado.estadoEmpleado, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.Estado_Empleado.estadoEmpleado, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
                 <div class="col-12">
                     <div class="form-group">
@@ -87,8 +87,19 @@
                         </button>
                     </div>
                 </div>
-        </div>
+            </div>
         }
+
+        <div class="col-12" style=" margin: 0 180px; top: -53px;">
+            <form action="@Url.Action("Index","Empleados")">
+                <button type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg> Cancelar
+                </button>
+            </form>
+        </div>
+
         <!-- DataTales Example -->
     </div>
 </div>

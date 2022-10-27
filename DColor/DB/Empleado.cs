@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Empleado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,20 +21,37 @@ namespace DColor.DB
         {
             this.ProductoTerminadoes = new HashSet<ProductoTerminado>();
         }
-    
+        [Required(ErrorMessage = "El Id Empleado es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Empleado")]
         public int idEmpleado { get; set; }
+        [Required(ErrorMessage = "El Id Rol es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Rol")]
         public Nullable<int> idRol { get; set; }
+        [Required(ErrorMessage = "El Id Estado es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Estado")]
         public Nullable<int> idEstado { get; set; }
+        [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre")]
         public string nombre { get; set; }
+        [Required(ErrorMessage = "Los Apellidos son obligatorios no se puede dejar espacios en blanco")]
+        [DisplayName("Apellidos")]
         public string apellido { get; set; }
+        [Required(ErrorMessage = "Eñ Correo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Correo")]
         public string correo { get; set; }
+        [Required(ErrorMessage = "La Cedula es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Cedula")]
         public string cedula { get; set; }
+        [Required(ErrorMessage = "La Contraseña es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Contraseña")]
         public string contraseña { get; set; }
         public string tokenRecovery { get; set; }
+        [Required(ErrorMessage = "El Telefono es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Telefono")]
         public Nullable<int> telefono { get; set; }
         public Nullable<int> intentos { get; set; }
         public Nullable<System.DateTime> ultimoIntento { get; set; }
-    
+     
         public virtual Estado_Empleado Estado_Empleado { get; set; }
         public virtual Rol Rol { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

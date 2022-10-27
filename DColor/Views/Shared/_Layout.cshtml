@@ -15,7 +15,7 @@
     <link href="~/vendor/bootstrap/scss/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/SB-Admin/css/estilos.css" rel="stylesheet" />
 
-    @RenderSection("scripts", required: false)
+
 
 </head>
 <body>
@@ -26,7 +26,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Dashboard", "Hom")">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Dashboard", "Home")">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <span class="brand-text font-weight-bold"> **Bienvenidos a** <br /><b class="m-0 row justify-content-center">DColores Sublimacion</b></span>
@@ -36,7 +36,7 @@
             <hr class="sidebar-divider my-0">
 
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Dashboard", "Hom")">
+                <a class="nav-link" href="@Url.Action("Dashboard", "Home")">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -181,7 +181,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="@Url.Action("CerrarSesion","Hom")">
+                                <a class="dropdown-item" href="@Url.Action("CerrarSesion","Home")">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar Sesion
                                 </a>
