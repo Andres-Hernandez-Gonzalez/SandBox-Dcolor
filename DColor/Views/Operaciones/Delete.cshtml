@@ -1,0 +1,41 @@
+﻿@model DColor.DB.Operacione
+
+@{
+    ViewBag.Title = "Eliminar Operación";
+}
+
+<h2>Eliminar Operación</h2>
+
+<h3>¿Tiene certeza de que desea eliminar éste tipo de operación?</h3>
+<div>
+    <h4>Operaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modulo.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modulo.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

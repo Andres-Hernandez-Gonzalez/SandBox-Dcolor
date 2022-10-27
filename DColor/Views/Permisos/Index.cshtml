@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DColor.DB.Rol_Operacion>
+
+@{
+    ViewBag.Title = "Todas los Permisos";
+}
+
+<h2>Listado de permisos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Permiso", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Operacione.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operacione.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rol.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Modificar", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

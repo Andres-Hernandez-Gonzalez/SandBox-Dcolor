@@ -1,0 +1,41 @@
+﻿@model DColor.DB.Rol_Operacion
+
+@{
+    ViewBag.Title = "Eliminar Permiso";
+}
+
+<h2>Eliminar Permiso</h2>
+
+<h3>¿Tiene certeza de que desea eliminar éste rol?</h3>
+<div>
+    <h4>Rol_Operacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Operacione.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operacione.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>
