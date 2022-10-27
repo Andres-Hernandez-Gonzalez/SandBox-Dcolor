@@ -40,7 +40,7 @@ namespace DColor.Controllers
             FormsAuthentication.SignOut();
             Session["Empleado"] = null;
 
-            return RedirectToAction("Login","Index");
+            return RedirectToAction("Index","Login");
         }
     }
 }
