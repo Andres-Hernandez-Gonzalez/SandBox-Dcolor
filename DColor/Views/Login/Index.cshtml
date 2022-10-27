@@ -1,0 +1,79 @@
+﻿@model DColor.DB.Empleado
+
+@{
+    Layout = null;
+    ViewBag.Title = "Inicio de Sesion";
+}
+@using CaptchaMvc.HtmlHelpers;
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio Sesion</title>
+    <!--<title>@ViewBag | SB Admin 2 - Dashboard</title>-->
+    <title>DColores Sublimacion</title>
+    <link href="~/Content/SB-Admin/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap/scss/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Estilos/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+        <section class="section">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card">
+                            <div class="login-brand">
+                                <img src="~/Content/Images/LogoDColor.jpg" alt="logo" width="200" />
+                            </div>
+                            @Html.Label("", (string)ViewBag.MjsEmailEnviado, new { @class = "text-center text-success" })
+                            @using (Html.BeginForm("Validar", "Login", FormMethod.Post))
+                            { 
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                @Html.AntiForgeryToken()
+                                <div class="card-body">
+                                    <form method="post" id="formulario">
+                                        <div class="form-group">
+                                            <label for="email">Correo Electronico</label>
+                                            @Html.EditorFor(model => model.correo, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="d-block">
+                                                <label for="password" class="control-label">Contraseña</label>
+                                                <div class="float-right">
+                                                    <a href="@Url.Content("~/Login/GenerarToken")" class="text-small">
+                                                        Olvido de Contraseña?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            @Html.TextBoxFor(m => m.contraseña, new { @class = "form-control", @required = "required", @type = "password" })
+                                            @Html.ValidationMessageFor(m => m.contraseña, "", new { @class = "text-danger" })
+                                            <div class="form-group text-center">
+                                            @Html.Captcha(5)
+                                            <br />
+                                                @Html.Label("", (string)ViewBag.error, new { @class = "text-center text-danger" })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                                                Iniciar Sesion
+                                            </button>
+                                            <br />
+                                            @Html.Label("", (string)ViewBag.MsjError, new { @class = "text-center text-danger" })
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+

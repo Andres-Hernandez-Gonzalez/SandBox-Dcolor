@@ -1,0 +1,106 @@
+﻿@model DColor.DB.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contraseña)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contraseña)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tokenRecovery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tokenRecovery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intentos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intentos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ultimoIntento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ultimoIntento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Empleado.estadoEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Empleado.estadoEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idEmpleado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
