@@ -4,172 +4,172 @@
     <EntitySetMapping Name="Bitacoras">
       <EntityTypeMapping TypeName="DColorModel.Bitacora">
         <MappingFragment StoreEntitySet="Bitacora">
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="detalleError" ColumnName="detalleError" />
           <ScalarProperty Name="idRegistro" ColumnName="idRegistro" />
+          <ScalarProperty Name="detalleError" ColumnName="detalleError" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clientes">
       <EntityTypeMapping TypeName="DColorModel.Cliente">
         <MappingFragment StoreEntitySet="Clientes">
-          <ScalarProperty Name="idEstadoCliente" ColumnName="idEstadoCliente" />
-          <ScalarProperty Name="cedula" ColumnName="cedula" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="idEstadoCliente" ColumnName="idEstadoCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empleadoes">
       <EntityTypeMapping TypeName="DColorModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
-          <ScalarProperty Name="ultimoIntento" ColumnName="ultimoIntento" />
-          <ScalarProperty Name="intentos" ColumnName="intentos" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="tokenRecovery" ColumnName="tokenRecovery" />
-          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
-          <ScalarProperty Name="cedula" ColumnName="cedula" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="apellido" ColumnName="apellido" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-          <ScalarProperty Name="idRol" ColumnName="idRol" />
           <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="tokenRecovery" ColumnName="tokenRecovery" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="intentos" ColumnName="intentos" />
+          <ScalarProperty Name="ultimoIntento" ColumnName="ultimoIntento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Estado_Empleadoes">
       <EntityTypeMapping TypeName="DColorModel.Estado_Empleado">
         <MappingFragment StoreEntitySet="Estado Empleado">
-          <ScalarProperty Name="estadoEmpleado" ColumnName="estadoEmpleado" />
           <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="estadoEmpleado" ColumnName="estadoEmpleado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Estado_Trabajoes">
       <EntityTypeMapping TypeName="DColorModel.Estado_Trabajo">
         <MappingFragment StoreEntitySet="Estado Trabajo">
-          <ScalarProperty Name="estadoProductoTerminado" ColumnName="estadoProductoTerminado" />
           <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="estadoProductoTerminado" ColumnName="estadoProductoTerminado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EstadoClientes">
       <EntityTypeMapping TypeName="DColorModel.EstadoCliente">
         <MappingFragment StoreEntitySet="EstadoCliente">
-          <ScalarProperty Name="estadoCliente1" ColumnName="estadoCliente" />
           <ScalarProperty Name="idEstadoCliente" ColumnName="idEstadoCliente" />
+          <ScalarProperty Name="estadoCliente" ColumnName="estadoCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EstadoDePedidoes">
       <EntityTypeMapping TypeName="DColorModel.EstadoDePedido">
         <MappingFragment StoreEntitySet="EstadoDePedido">
-          <ScalarProperty Name="estadoDePedido1" ColumnName="estadoDePedido" />
           <ScalarProperty Name="idEstadoPedido" ColumnName="idEstadoPedido" />
+          <ScalarProperty Name="estadoDePedido1" ColumnName="estadoDePedido" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Insumos">
       <EntityTypeMapping TypeName="DColorModel.Insumo">
         <MappingFragment StoreEntitySet="Insumos">
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="marca" ColumnName="marca" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
           <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Materiales_Trabajoes">
       <EntityTypeMapping TypeName="DColorModel.Materiales_Trabajo">
         <MappingFragment StoreEntitySet="Materiales Trabajo">
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="nombreEmpleado" ColumnName="nombreEmpleado" />
-          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
-          <ScalarProperty Name="idTrabajo" ColumnName="idTrabajo" />
           <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+          <ScalarProperty Name="idTrabajo" ColumnName="idTrabajo" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="nombreProducto" ColumnName="nombreProducto" />
+          <ScalarProperty Name="nombreEmpleado" ColumnName="nombreEmpleado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Moduloes">
       <EntityTypeMapping TypeName="DColorModel.Modulo">
         <MappingFragment StoreEntitySet="Modulo">
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Operaciones">
       <EntityTypeMapping TypeName="DColorModel.Operacione">
         <MappingFragment StoreEntitySet="Operaciones">
-          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pedidos">
       <EntityTypeMapping TypeName="DColorModel.Pedido">
         <MappingFragment StoreEntitySet="Pedidos">
-          <ScalarProperty Name="horaEntregaPedido" ColumnName="horaEntregaPedido" />
-          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
-          <ScalarProperty Name="idEstadoPedido" ColumnName="idEstadoPedido" />
-          <ScalarProperty Name="fechaEntregaEstimada" ColumnName="fechaEntregaEstimada" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
           <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="fechaEntregaEstimada" ColumnName="fechaEntregaEstimada" />
+          <ScalarProperty Name="idEstadoPedido" ColumnName="idEstadoPedido" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="horaEntregaPedido" ColumnName="horaEntregaPedido" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductoTerminadoes">
       <EntityTypeMapping TypeName="DColorModel.ProductoTerminado">
         <MappingFragment StoreEntitySet="ProductoTerminado">
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="idEstadoTrabajo" ColumnName="idEstadoTrabajo" />
-          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
           <ScalarProperty Name="idProductoTerminado" ColumnName="idProductoTerminado" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEstadoTrabajo" ColumnName="idEstadoTrabajo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Proveedors">
       <EntityTypeMapping TypeName="DColorModel.Proveedor">
         <MappingFragment StoreEntitySet="Proveedor">
-          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Rols">
       <EntityTypeMapping TypeName="DColorModel.Rol">
         <MappingFragment StoreEntitySet="Rol">
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Rol_Operacions">
       <EntityTypeMapping TypeName="DColorModel.Rol_Operacion">
         <MappingFragment StoreEntitySet="Rol Operacion">
-          <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
-          <ScalarProperty Name="idRol" ColumnName="idRol" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

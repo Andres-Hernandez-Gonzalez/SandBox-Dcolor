@@ -1,12 +1,18 @@
 ﻿.bg-primary {
-    background: #F06292 !important;
+    background: #ff87ab !important;
 }
 .bg-secondary {
-    background: #BA68C8 !important;
+    background: #cfbaf0 !important;
 }
 .bg-third {
-    background: #4FC3F7 !important;
+    background: #90dbf4 !important;
 }
 .bg-fourth {
-    background: #FF8A65 !important;
+    background: #ffd8be !important;
+}
+.bg-five {
+    background: #b3e9c7 !important;
+}
+.bg-sixe {
+    background: #9bf6ff !important;
 }
