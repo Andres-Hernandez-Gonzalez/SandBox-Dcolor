@@ -1,14 +1,19 @@
-﻿using DColor.DB;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
+using DColor;
+using DColor.DB;
 
 namespace DColor.Controllers
 {
     public class ProveedorsController : Controller
     {
-        private DColorEntities db = new DColorEntities();
+        private DB.DColorEntities db = new DB.DColorEntities();
 
         // GET: Proveedors
         public ActionResult Index()

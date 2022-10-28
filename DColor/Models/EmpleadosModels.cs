@@ -5,7 +5,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
+using System.Web.Helpers;
 using WebGrease.Css.Ast.Selectors;
 
 namespace DColor.Models
@@ -27,7 +30,7 @@ namespace DColor.Models
                         var respuesta = (from x in contex.Empleadoes where x.correo == obj.correo && x.contraseña == obj.contraseña select x).FirstOrDefault();
                         if (respuesta != null)
                         {
-                            //ResetIntentos(obj.correo);
+                            ResetIntentos(obj.correo);
                             var permisos = (from x in contex.Rols
                                             where x.idRol == respuesta.idRol
                                             select x).ToList();
@@ -44,25 +47,26 @@ namespace DColor.Models
                                     id = item.idRol
                                 });
                             }
-                            
+
                             empleados.listaPermisos = listaPermisos;
                             return empleados;
                         }
                         else
                         {
                             // sumar intentos
-                            //SumarIntentos(obj.correo);
+                            SumarIntentos(obj.correo);
                             empleados.correo = "Contraseña erronea";
                             return empleados;
                         }
                     }
                     else
-                    {   empleados.correo = "El correo digitado no existe";
+                    {
+                        empleados.correo = "El correo digitado no existe";
                         return empleados;
                     }
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     var error = ex.ToString();
                     // modeloBitacora.RegistrarError(error);
@@ -85,7 +89,7 @@ namespace DColor.Models
                 cmd.Parameters.AddWithValue("@intentos", 0);
                 cmd.Parameters.AddWithValue("@correo", correo);
                 cmd.ExecuteNonQuery();
-            }   
+            }
         }
 
         // sumar intentos
@@ -97,7 +101,7 @@ namespace DColor.Models
                 try
                 {
                     var select = (from x in context.Empleadoes where x.correo == correo select x).FirstOrDefault();
-                    if(select.intentos > 0)
+                    if (select.intentos > 0)
                     {
                         intentos = 1;
                     }
@@ -114,7 +118,8 @@ namespace DColor.Models
                         cmd.Parameters.AddWithValue("@correo", correo);
                         cmd.ExecuteNonQuery();
                     }
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     var error = ex.ToString();
                     //modeloBitacora.RegistrarError(error);
@@ -126,12 +131,12 @@ namespace DColor.Models
         public bool ValidarCorreo(string correo)
         {
             bool correoStatus = false;
-            using(var contex = new DColorEntities())
+            using (var contex = new DColorEntities())
             {
                 try
                 {
                     var existe = (from x in contex.Empleadoes where x.correo == correo select x).FirstOrDefault();
-                    if(existe != null)
+                    if (existe != null)
                     {
                         correoStatus = true;
                     }
@@ -149,6 +154,105 @@ namespace DColor.Models
             }
             return correoStatus;
 
+        }
+
+        public Empleado GenerarToken(TokenEntiti obj)
+        {
+            string token = GetSha256(Guid.NewGuid().ToString());
+            Empleado usuario = new Empleado();
+            using (var contex = new DColorEntities())
+            {
+                try
+                {
+                    var respuesta = (from x in contex.Empleadoes
+                                     where x.correo == obj.correo
+                                     select x).FirstOrDefault();
+                    if (respuesta != null)
+                    {
+                        string cadena = "Data Source=77P7063;Initial Catalog=DColor;Integrated Security=true";
+                        using (SqlConnection cn = new SqlConnection(cadena))
+                        {
+                            cn.Open();
+                            SqlCommand cmd = new SqlCommand("UPDATE Empleado SET tokenRecovery = @token WHERE correo = @correo", cn);
+                            cmd.Parameters.AddWithValue("@token", token);
+                            cmd.Parameters.AddWithValue("@correo", obj.correo);
+                            cmd.ExecuteNonQuery();
+                        }
+                        Email email = new Email();
+                        email.PruebaPlantilla(obj.correo, token);
+                        return usuario;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                finally
+                {
+                    contex.Dispose();
+                }
+            }
+
+        }
+
+        private string GetSha256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
+        }
+
+        public Empleado RestablecerPassword(RecuperarPassword obj)
+        {
+            Empleado usuario = new Empleado();
+
+            using (var contex = new DColorEntities())
+            {
+                try
+                {
+                    var respuesta = (from x in contex.Empleadoes
+                                     where x.tokenRecovery == obj.token
+                                     select x).FirstOrDefault();
+
+                    if (respuesta != null && obj.contraseña != null)
+                    {
+                        respuesta.contraseña = obj.contraseña;
+                        respuesta.tokenRecovery = null;
+
+                        contex.SaveChanges();
+
+
+                    }
+                    if (respuesta == null)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        return usuario;
+                    }
+
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+                    contex.Dispose();
+                }
+            }
         }
     }
 }
