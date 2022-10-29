@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Insumo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,12 +21,28 @@ namespace DColor.DB
         {
             this.Materiales_Trabajo = new HashSet<Materiales_Trabajo>();
         }
-    
+        [Required(ErrorMessage = "El Id Producto es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Producto")]
         public int idProducto { get; set; }
+
+        [Required(ErrorMessage = "El Id Proveedor es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Proveedor")]
         public Nullable<int> idProveedor { get; set; }
+
+        [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre")]
         public string nombre { get; set; }
+
+        [Required(ErrorMessage = "La marca es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Marca")]
         public string marca { get; set; }
+
+        [Required(ErrorMessage = "La Cantidad es obligatoria no se puede dejar espacios en blanco")]
+        [DisplayName("Cantidad")]
         public Nullable<int> cantidad { get; set; }
+
+        [Required(ErrorMessage = "El Precio es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Precio")]
         public Nullable<int> precio { get; set; }
     
         public virtual Proveedor Proveedor { get; set; }
