@@ -50,6 +50,35 @@
             <!-- Nav Item - Pages Collapse Menu -->
 
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages5" aria-expanded="true"
+                   aria-controls="collapsePages">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Gestion de Roles</span>
+                </a>
+                <div id="collapsePages5" class="collapse" aria-labelledby="headingPages"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <div class="sidebar-heading text-dark">
+                            Roles
+                        </div>
+                        <a class="collapse-item" href="@Url.Action("Index", "Roles")">Consultar Roles</a>
+                        <a class="collapse-item" href="@Url.Action("Create", "Roles")">Crear Rol</a>
+                        <div class="sidebar-heading text-dark">
+                            Operaciones
+                        </div>
+                        <a class="collapse-item" href="@Url.Action("Index", "Operaciones")">Consultar Operaciones</a>
+                        <a class="collapse-item" href="@Url.Action("Create", "Operaciones")">Crear Operacion</a>
+                        <div class="sidebar-heading text-dark">
+                            Permisos
+                        </div>
+                        <a class="collapse-item" href="@Url.Action("Index", "Permisos")">Consultar Permisos</a>
+                        <a class="collapse-item" href="@Url.Action("Create", "Permisos")">Crear Permisos</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
                    aria-controls="collapsePages">
                     <i class="fas fa-user-friends"></i>
@@ -102,8 +131,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="@Url.Action("ConsultarProductos", "Inventario")">Consultar Inventario</a>
-                        <a class="collapse-item" href="@Url.Action("CrearProductos", "Inventario")">Crear Productos</a>
+                        <a class="collapse-item" href="@Url.Action("Index", "Inventario")">Consultar Inventario</a>
+                        <a class="collapse-item" href="@Url.Action("Create", "Inventario")">Crear Productos</a>
                     </div>
                 </div>
             </li>

@@ -2,56 +2,111 @@
 
 @{
     ViewBag.Title = "Inventario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3 bg-secondary">
+        <h6 class="m-0 font-weight-bold text-dark">Lista de Insumos</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
 
-<h2>Index</h2>
+            <form action="Create">
+                <button type="submit" class="btn btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                    </svg> Registrar Insumo
+                </button>
+            </form>
 
-<p>
-    @Html.ActionLink("Ingresar nuevo tipo de insumo", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.marca)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.cantidad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.precio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Proveedor.nombre)
-        </th>
-        <th></th>
-    </tr>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Proveedor.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.marca)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.cantidad)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.precio)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.marca)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cantidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.precio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proveedor.nombre)
-        </td>
-        <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.idProducto }) |
-            @Html.ActionLink("Detalles", "Details", new { id = item.idProducto }) |
-            @Html.ActionLink("Eliminar tipo de insumo", "Delete", new { id = item.idProducto })
-        </td>
-    </tr>
-}
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Proveedor.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.marca)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.cantidad)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.precio)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
 
-</table>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Proveedor.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.marca)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.cantidad)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.precio)
+                                </td>
+      
+                                <td class="">
+                                    <div class="d-flex justify-content-sm-around">
+                                        <div class="">
+                                            @Html.ActionLink("Modificar", "Edit", new { id = item.idProducto })
+                                        </div>
+                                        <div class="">
+                                            @Html.ActionLink("Eliminar", "Delete", new { id = item.idProducto })
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- DataTales Example -->
+    </div>
+</div>
+

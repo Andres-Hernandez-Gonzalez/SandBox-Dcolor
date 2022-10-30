@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Modulo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +21,12 @@ namespace DColor.DB
         {
             this.Operaciones = new HashSet<Operacione>();
         }
-    
+        [Required(ErrorMessage = "El Id Modulo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Modulo")]
         public int idModulo { get; set; }
+
+        [Required(ErrorMessage = "El Nombre Modulo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre Modulo")]
         public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
