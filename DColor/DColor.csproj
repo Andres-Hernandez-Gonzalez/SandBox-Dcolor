@@ -2222,7 +2222,6 @@
     <Content Include="Views\Inventario\Delete.cshtml" />
     <Content Include="Views\Inventario\Edit.cshtml" />
     <Content Include="Views\Inventario\Index.cshtml" />
-    <Content Include="Views\Empleados\Details.cshtml" />
     <Content Include="Views\Proveedors\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
