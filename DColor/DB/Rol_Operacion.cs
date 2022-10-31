@@ -27,7 +27,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "El Nombre Operacion es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Nombre Operacion")]
         public Nullable<int> idOperacion { get; set; }
-    
+
         public virtual Operacione Operacione { get; set; }
         public virtual Rol Rol { get; set; }
     }

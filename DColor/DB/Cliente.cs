@@ -45,7 +45,6 @@ namespace DColor.DB
         public string cedula { get; set; }
         [DisplayName("Id EstadoCliente")]
         public Nullable<int> idEstadoCliente { get; set; }
-    
         public virtual EstadoCliente EstadoCliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedidos { get; set; }
