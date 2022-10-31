@@ -25,7 +25,7 @@ namespace DColor.DB
         [DisplayName("Id Proveedor")]
         public int idProveedor { get; set; }
         [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
-        [DisplayName("Nombre")]
+        [DisplayName("Nombre Proveedor")]
         public string nombre { get; set; }
         [Required(ErrorMessage = "La Direccion es obligatoria no se puede dejar espacios en blanco")]
         [DisplayName("Direccion")]
@@ -37,7 +37,7 @@ namespace DColor.DB
         [DisplayName("Correo")]
         public string correo { get; set; }
         public string apellidos { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Insumo> Insumos { get; set; }
     }

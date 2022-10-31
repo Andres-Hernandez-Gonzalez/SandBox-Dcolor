@@ -27,7 +27,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "El Estado Empleado es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Estado Empleado")]
         public string estadoEmpleado { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empleado> Empleadoes { get; set; }
     }

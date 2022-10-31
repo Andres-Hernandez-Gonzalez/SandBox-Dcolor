@@ -28,7 +28,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "El Nombre Modulo es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Nombre Modulo")]
         public string nombre { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Operacione> Operaciones { get; set; }
     }

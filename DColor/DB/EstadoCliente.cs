@@ -27,7 +27,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "El Estado Cliente es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Estado Cliente")]
         public string estadoCliente { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cliente> Clientes { get; set; }
     }

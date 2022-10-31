@@ -28,7 +28,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "El Rol Empleado es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Nombre Rol")]
         public string nombre { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empleado> Empleadoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

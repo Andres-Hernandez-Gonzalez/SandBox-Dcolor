@@ -32,7 +32,7 @@
     <Property Name="apellido" Type="varchar" MaxLength="50" />
     <Property Name="correo" Type="varchar" MaxLength="50" />
     <Property Name="cedula" Type="varchar" MaxLength="50" />
-    <Property Name="contraseña" Type="varchar" MaxLength="50" />
+    <Property Name="contraseña" Type="varchar" MaxLength="64" />
     <Property Name="tokenRecovery" Type="varchar" MaxLength="50" />
     <Property Name="telefono" Type="int" />
     <Property Name="intentos" Type="int" />

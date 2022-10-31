@@ -52,7 +52,7 @@ namespace DColor.DB
         public Nullable<int> telefono { get; set; }
         public Nullable<int> intentos { get; set; }
         public Nullable<System.DateTime> ultimoIntento { get; set; }
-     
+
         public virtual Estado_Empleado Estado_Empleado { get; set; }
         public virtual Rol Rol { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
