@@ -11,13 +11,21 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Rol_Operacion
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("Id único de permiso")]
         public int id { get; set; }
+        [DisplayName("Id del rol relacionado al permiso")]
         public Nullable<int> idRol { get; set; }
+        [DisplayName("Id de la operación relacionada al permiso")]
         public Nullable<int> idOperacion { get; set; }
-    
+
         public virtual Operacione Operacione { get; set; }
         public virtual Rol Rol { get; set; }
     }

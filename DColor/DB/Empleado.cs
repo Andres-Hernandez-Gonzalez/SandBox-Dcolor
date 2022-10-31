@@ -37,7 +37,7 @@ namespace DColor.DB
         [Required(ErrorMessage = "Los Apellidos son obligatorios no se puede dejar espacios en blanco")]
         [DisplayName("Apellidos")]
         public string apellido { get; set; }
-        [Required(ErrorMessage = "Eñ Correo es obligatorio no se puede dejar espacios en blanco")]
+        [Required(ErrorMessage = "El Correo es obligatorio no se puede dejar espacios en blanco")]
         [DisplayName("Correo")]
         public string correo { get; set; }
         [Required(ErrorMessage = "La Cedula es obligatoria no se puede dejar espacios en blanco")]

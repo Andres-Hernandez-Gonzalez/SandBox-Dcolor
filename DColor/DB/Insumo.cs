@@ -11,7 +11,11 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Web.Mvc;
+
     public partial class Insumo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,14 +23,23 @@ namespace DColor.DB
         {
             this.Materiales_Trabajo = new HashSet<Materiales_Trabajo>();
         }
-    
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("Id único de insumo")]
         public int idProducto { get; set; }
+        [DisplayName("Id único de proveedor del insumo")]
         public Nullable<int> idProveedor { get; set; }
+        [DisplayName("Insumo")]
         public string nombre { get; set; }
+        [DisplayName("Marca")]
         public string marca { get; set; }
+        [DisplayName("Existencias")]
         public Nullable<int> cantidad { get; set; }
+
+        [DisplayName("Precio")]
         public Nullable<int> precio { get; set; }
-    
+        [DisplayName("Proveedor")]
         public virtual Proveedor Proveedor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Materiales_Trabajo> Materiales_Trabajo { get; set; }

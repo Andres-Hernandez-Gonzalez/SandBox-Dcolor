@@ -1,0 +1,24 @@
+﻿@model DColor.DB.Insumo
+
+@using (Html.BeginForm("Edit", "Inventario", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div>
+
+
+
+    @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { style = "max-width:50%;" } })
+    @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.idProducto)
+    @Html.HiddenFor(model => model.idProveedor)
+    @Html.HiddenFor(model => model.nombre)
+    @Html.HiddenFor(model => model.marca)
+    @Html.HiddenFor(model => model.precio)
+
+    <input type="submit" value="Guardar" class="btn btn-default" style="max-width:50%" />
+
+
+</div>
+}

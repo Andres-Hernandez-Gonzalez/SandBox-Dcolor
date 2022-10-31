@@ -15,6 +15,8 @@ namespace DColor.Controllers
     {
         private DColorEntities db = new DColorEntities();
 
+
+
         // GET: Inventario
         public async Task<ActionResult> Index()
         {
@@ -95,6 +97,19 @@ namespace DColor.Controllers
             return View(insumo);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> EditNB(Insumo insumo)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(insumo).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(insumo);
+        }
+
         // GET: Inventario/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
@@ -120,6 +135,8 @@ namespace DColor.Controllers
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+
 
         protected override void Dispose(bool disposing)
         {

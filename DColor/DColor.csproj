@@ -2229,6 +2229,7 @@
     <Content Include="Views\Inventario\Index.cshtml" />
     <Content Include="Views\Empleados\Details.cshtml" />
     <Content Include="Views\Proveedors\Details.cshtml" />
+    <Content Include="Views\Inventario\_ActualizarExistencias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,7 +11,10 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Operacione
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,11 +22,16 @@ namespace DColor.DB
         {
             this.Rol_Operacion = new HashSet<Rol_Operacion>();
         }
-    
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DisplayName("Id único de operación")]
         public int id { get; set; }
+        [DisplayName("Operación")]
         public string nombre { get; set; }
+        [DisplayName("Módulo afectado por la operación")]
         public Nullable<int> idModulo { get; set; }
-    
+
         public virtual Modulo Modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rol_Operacion> Rol_Operacion { get; set; }

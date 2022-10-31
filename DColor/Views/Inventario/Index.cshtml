@@ -4,54 +4,73 @@
     ViewBag.Title = "Inventario";
 }
 
-<h2>Index</h2>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
 
-<p>
-    @Html.ActionLink("Ingresar nuevo tipo de insumo", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.marca)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.cantidad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.precio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Proveedor.nombre)
-        </th>
-        <th></th>
-    </tr>
+    <h2>Inventario</h2>
+    
+    <p>
+        @Html.ActionLink("Ingresar nuevo tipo de insumo", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.Label("Actualizar existencias")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proveedor.nombre)
+            </th>
+            <th>
+                @*Acciones Administrativas*@
+            </th>
+            @*<th>
+                Ingreso Rápido
+            </th>*@
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.marca)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cantidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.precio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proveedor.nombre)
-        </td>
-        <td>
-            @Html.ActionLink("Modificar", "Edit", new { id = item.idProducto }) |
-            @Html.ActionLink("Detalles", "Details", new { id = item.idProducto }) |
-            @Html.ActionLink("Eliminar tipo de insumo", "Delete", new { id = item.idProducto })
-        </td>
-    </tr>
+    @foreach (DColor.DB.Insumo item in Model) {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.Partial("_ActualizarExistencias", item)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proveedor.nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id = item.idProducto }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.idProducto }) |
+                @Html.ActionLink("Eliminar tipo de insumo", "Delete", new { id = item.idProducto })
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
+
+    </table>
+
 }
-
-</table>

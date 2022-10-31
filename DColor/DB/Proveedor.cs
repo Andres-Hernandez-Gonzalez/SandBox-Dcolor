@@ -25,7 +25,7 @@ namespace DColor.DB
         [DisplayName("Id Proveedor")]
         public int idProveedor { get; set; }
         [Required(ErrorMessage = "El Nombre es obligatorio no se puede dejar espacios en blanco")]
-        [DisplayName("Nombre")]
+        [DisplayName("Nombre del proveedor")]
         public string nombre { get; set; }
         [Required(ErrorMessage = "La Direccion es obligatoria no se puede dejar espacios en blanco")]
         [DisplayName("Direccion")]
