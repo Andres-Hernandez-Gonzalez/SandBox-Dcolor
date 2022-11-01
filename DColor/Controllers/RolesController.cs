@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DColor.DB;
+using System.Linq.Dynamic.Core;
 
 namespace DColor.Controllers
 {
@@ -20,6 +21,12 @@ namespace DColor.Controllers
         {
             return View(await db.Rols.ToListAsync());
         }
+
+        public async Task<ActionResult> _IndexPermisosPorRol(int rolId)
+        {
+            return PartialView(await db.Rol_Operacions.Where(ro => ro.idRol == rolId).ToListAsync());
+        }
+
 
         // GET: Roles/Details/5
         public async Task<ActionResult> Details(int? id)

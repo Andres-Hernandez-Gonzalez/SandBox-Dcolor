@@ -99,7 +99,7 @@ namespace DColor.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> EditNB(Insumo insumo)
+        public async Task<ActionResult> EditExistencias([Bind(Include = "idProducto,idProveedor,nombre,marca,cantidad,precio")] Insumo insumo)
         {
             if (ModelState.IsValid)
             {
@@ -107,6 +107,7 @@ namespace DColor.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+            ViewBag.idProveedor = new SelectList(db.Proveedors, "idProveedor", "nombre", insumo.idProveedor);
             return View(insumo);
         }
 

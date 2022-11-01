@@ -65,6 +65,21 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adminRoles"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-list"></i>
+                    <span>Gestion de Roles</span>
+                </a>
+                <div id="adminRoles" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="@Url.Action("Index", "Roles")">Consultar Roles</a>
+                        <a class="collapse-item" href="@Url.Action("Create", "Roles")">Crear Roles</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages4" aria-expanded="true"
                    aria-controls="collapsePages">
                     <i class="fas fa-user-friends"></i>

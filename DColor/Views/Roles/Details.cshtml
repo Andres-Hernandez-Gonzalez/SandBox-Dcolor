@@ -7,7 +7,11 @@
 <h2>Detalles</h2>
 
 <div>
+
+    @*@Html.Action("_IndexPermisosPorRol", "Roles", new { rolId = Model.idRol });*@
+
     <h4>Rol</h4>
+    @Html.DisplayFor(model => model.idRol)
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,13 +23,11 @@
         </dd>
 
     </dl>
+
+
+
 </div>
 
-<div>
-    @{
-        Html.RenderPartial("parcialGetListaPermisos", Model.Rol_Operacion);
-    }
-</div>
 
 <p>
     @Html.ActionLink("Modificar", "Edit", new { id = Model.idRol }) |

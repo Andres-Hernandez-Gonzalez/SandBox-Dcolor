@@ -2211,7 +2211,6 @@
     <Content Include="Views\Roles\Details.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
-    <Content Include="Views\Roles\_GetListaPermisos.cshtml" />
     <Content Include="Views\Permisos\Create.cshtml" />
     <Content Include="Views\Permisos\Delete.cshtml" />
     <Content Include="Views\Permisos\Details.cshtml" />
@@ -2230,6 +2229,7 @@
     <Content Include="Views\Empleados\Details.cshtml" />
     <Content Include="Views\Proveedors\Details.cshtml" />
     <Content Include="Views\Inventario\_ActualizarExistencias.cshtml" />
+    <Content Include="Views\Roles\_IndexPermisosPorRol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
