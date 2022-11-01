@@ -1,9 +1,7 @@
-﻿@model IEnumerable<DColor.DB.Proveedor>
+﻿@model IEnumerable<DColor.Proveedor>
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -61,42 +59,29 @@
                             </tr>
                         </tfoot>
 
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.nombre)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.direccion)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.telefono)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.correo)
-                                </td>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProveedor }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProveedor }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProveedor })
+        </td>
+    </tr>
+}
 
-                                <td class="">
-                                    <div class="d-flex justify-content-sm-around">
-                                        <div class="">
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.idProveedor })
-
-                                        </div>
-                                        <div class="">
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.idProveedor })
-                                        </div>
-
-                                    </div>
-                                </td>
-                            </tr>
-                        }
-
-                    </table>
-                </div>
-            </div>
-        </div>
-        <hr />
-        <!-- DataTales Example -->
-    </div>
-</div>
+</table>

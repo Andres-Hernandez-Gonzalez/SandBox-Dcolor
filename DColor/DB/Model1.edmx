@@ -472,7 +472,7 @@
             <PropertyRef Name="idEstadoCliente" />
           </Key>
           <Property Name="idEstadoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="estadoCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="estadoCliente1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Clientes" Relationship="Self.FK_Clientes_EstadoCliente" FromRole="EstadoCliente" ToRole="Clientes" />
         </EntityType>
         <EntityType Name="EstadoDePedido">
@@ -900,7 +900,7 @@
             <EntityTypeMapping TypeName="DColorModel.EstadoCliente">
               <MappingFragment StoreEntitySet="EstadoCliente">
                 <ScalarProperty Name="idEstadoCliente" ColumnName="idEstadoCliente" />
-                <ScalarProperty Name="estadoCliente" ColumnName="estadoCliente" />
+                <ScalarProperty Name="estadoCliente1" ColumnName="estadoCliente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

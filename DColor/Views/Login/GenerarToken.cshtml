@@ -1,0 +1,55 @@
+﻿@model DColor.Entities.TokenEntiti
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Envio de Correo para recuperacion de Contraseña</title>
+    <!--<title>@ViewBag | SB Admin 2 - Dashboard</title>-->
+    <title>DColores Sublimacion</title>
+
+    <link href="~/Content/SB-Admin/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap/scss/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Estilos/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+        <section class="section">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card">
+                            <div class="login-brand">
+                                <img src="~/Content/Images/LogoDColor.jpg" alt="logo" width="200" />
+                            </div>
+                            @using (Html.BeginForm("GenerarToken", "Login", FormMethod.Post))
+                            {
+                                <div class="card-body">
+                                    <form method="post" id="formulario">
+                                        <div class="form-group">
+                                            <label for="email">Correo Electronico</label>
+                                            @Html.TextBoxFor(m => m.correo, new { @class = "form-control", @type = "Text" })
+                                            @Html.ValidationMessageFor(m => m.correo, "", new { @class = "text-danger" })
+
+                                            @Html.Label("", (string)ViewBag.MjsEmail, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                                                Enviar Correo
+                                            </button>
+                                            <label class="label label-danger">@ViewBag.MsjError</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

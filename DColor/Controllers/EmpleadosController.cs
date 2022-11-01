@@ -1,20 +1,21 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Mvc;
-using ClosedXML.Excel;
+using DColor;
 using DColor.DB;
-using Rotativa;
 
 namespace DColor.Controllers
 {
     public class EmpleadosController : Controller
     {
-        private DColorEntities db = new DColorEntities();
+        private DB.DColorEntities db = new DB.DColorEntities();
 
         // GET: Empleadoes
         public ActionResult Index()
