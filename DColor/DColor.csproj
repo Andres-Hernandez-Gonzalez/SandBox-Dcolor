@@ -135,6 +135,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\InventarioController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OperacionesController.cs" />
+    <Compile Include="Controllers\PermisosController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="DB\Bitacora.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -218,6 +223,30 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Estilos\Login.css" />
+    <Content Include="Content\Images\LogoDColor.jpg" />
+    <Content Include="Content\Images\undraw_posting_photo.svg" />
+    <Content Include="Content\Images\undraw_profile.svg" />
+    <Content Include="Content\Images\undraw_profile_1.svg" />
+    <Content Include="Content\Images\undraw_profile_2.svg" />
+    <Content Include="Content\Images\undraw_profile_3.svg" />
+    <Content Include="Content\Images\undraw_rocket.svg" />
+    <Content Include="Content\SB-Admin\css\estilos.css" />
+    <Content Include="Content\SB-Admin\css\sb-admin-2.css" />
+    <Content Include="Content\SB-Admin\css\sb-admin-2.min.css" />
+    <Content Include="Content\SB-Admin\img\undraw_posting_photo.svg" />
+    <Content Include="Content\SB-Admin\img\undraw_profile.svg" />
+    <Content Include="Content\SB-Admin\img\undraw_profile_1.svg" />
+    <Content Include="Content\SB-Admin\img\undraw_profile_2.svg" />
+    <Content Include="Content\SB-Admin\img\undraw_profile_3.svg" />
+    <Content Include="Content\SB-Admin\img\undraw_rocket.svg" />
+    <Content Include="Content\SB-Admin\js\demo\chart-area-demo.js" />
+    <Content Include="Content\SB-Admin\js\demo\chart-bar-demo.js" />
+    <Content Include="Content\SB-Admin\js\demo\chart-pie-demo.js" />
+    <Content Include="Content\SB-Admin\js\demo\datatables-demo.js" />
+    <Content Include="Content\SB-Admin\js\sb-admin-2.js" />
+    <Content Include="Content\SB-Admin\js\sb-admin-2.min.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -241,6 +270,11 @@
     <Content Include="DB\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="App_Browsers\qt.browser" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -279,9 +313,26 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\GenerarToken.cshtml" />
     <Content Include="Views\Login\RestablecerPassword.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Permisos\Create.cshtml" />
+    <Content Include="Views\Permisos\Delete.cshtml" />
+    <Content Include="Views\Permisos\Edit.cshtml" />
+    <Content Include="Views\Permisos\Index.cshtml" />
+    <Content Include="Views\Operaciones\Create.cshtml" />
+    <Content Include="Views\Operaciones\Delete.cshtml" />
+    <Content Include="Views\Operaciones\Edit.cshtml" />
+    <Content Include="Views\Operaciones\Index.cshtml" />
+    <Content Include="Views\Inventario\Create.cshtml" />
+    <Content Include="Views\Inventario\Delete.cshtml" />
+    <Content Include="Views\Inventario\Edit.cshtml" />
+    <Content Include="Views\Inventario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

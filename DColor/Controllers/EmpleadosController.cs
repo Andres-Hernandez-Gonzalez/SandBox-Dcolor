@@ -5,6 +5,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web.Mvc;
 using DColor;
 using DColor.DB;
@@ -55,6 +57,7 @@ namespace DColor.Controllers
             if (ModelState.IsValid)
             {
                 db.Empleadoes.Add(empleado);
+                empleado.contraseña = GetSha256(empleado.contraseña);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -132,6 +135,59 @@ namespace DColor.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult ReportePdf()
+        {
+            var empleadoes = db.Empleadoes.Include(e => e.Estado_Empleado).Include(e => e.Rol);
+            return View(empleadoes);
+        }
+
+        public ActionResult Print()
+        {
+            return new ActionAsPdf("ReportePdf") { FileName = "Reporte General de Empleados" };
+        }
+
+
+        [HttpPost]
+        public FileResult GenerarExcel()
+        {
+            DColorEntities entities = new DColorEntities();
+            DataTable dt = new DataTable("Reporte General de Empleados");
+            dt.Columns.AddRange(new DataColumn[7] { new DataColumn("Rol Empleado"),
+                                            new DataColumn("Cedula"),
+                                            new DataColumn("Nombre"),
+                                            new DataColumn("Apellidos"),
+                                            new DataColumn("Telefono"),
+                                            new DataColumn("Correo"),
+                                            new DataColumn("Estado Empleado") });
+
+            var empleadoes = db.Empleadoes.Include(e => e.Estado_Empleado).Include(e => e.Rol);
+
+            foreach (var db in empleadoes)
+            {
+                dt.Rows.Add(db.Rol.nombre, db.cedula, db.nombre, db.apellido, db.telefono, db.correo, db.Estado_Empleado.estadoEmpleado);
+            }
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte General de Empleados.xlsx");
+                }
+            }
+        }
+        private string GetSha256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
     }
 }

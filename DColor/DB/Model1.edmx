@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DColorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DColorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Bitacora">
           <Key>
             <PropertyRef Name="idRegistro" />
@@ -37,7 +37,7 @@
           <Property Name="apellido" Type="varchar" MaxLength="50" />
           <Property Name="correo" Type="varchar" MaxLength="50" />
           <Property Name="cedula" Type="varchar" MaxLength="50" />
-          <Property Name="contraseña" Type="varchar" MaxLength="50" />
+          <Property Name="contraseña" Type="varchar" MaxLength="64" />
           <Property Name="tokenRecovery" Type="varchar" MaxLength="50" />
           <Property Name="telefono" Type="int" />
           <Property Name="intentos" Type="int" />
@@ -403,8 +403,7 @@
             <End Role="Rol Operacion" EntitySet="Rol Operacion" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DColorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -443,7 +442,7 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contraseña" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
           <Property Name="tokenRecovery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="Int32" />
           <Property Name="intentos" Type="Int32" />

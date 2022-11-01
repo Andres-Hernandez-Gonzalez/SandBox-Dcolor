@@ -22,7 +22,7 @@ namespace DColor.DB
     
         public int idEstado { get; set; }
         public string estadoEmpleado { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Empleado> Empleadoes { get; set; }
     }

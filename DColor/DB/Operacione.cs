@@ -11,7 +11,9 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Operacione
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,11 +21,18 @@ namespace DColor.DB
         {
             this.Rol_Operacion = new HashSet<Rol_Operacion>();
         }
-    
+        [Required(ErrorMessage = "El Id Operacion es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Operacion")]
         public int id { get; set; }
+
+        [Required(ErrorMessage = "El Nombre Operacion es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre Operacion")]
         public string nombre { get; set; }
+
+        [Required(ErrorMessage = "El Nombre Modulo es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre Modulo")]
         public Nullable<int> idModulo { get; set; }
-    
+
         public virtual Modulo Modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rol_Operacion> Rol_Operacion { get; set; }

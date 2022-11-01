@@ -41,6 +41,7 @@ namespace DColor.DB
         public virtual Rol Rol { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductoTerminado> ProductoTerminadoes { get; set; }
+
         public List<PermisosObj> listaPermisos { get; set; }
     }
 }

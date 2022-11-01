@@ -11,13 +11,23 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Rol_Operacion
     {
+        [Required(ErrorMessage = "El Id Rol Operacion es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Id Rol Operacion")]
         public int id { get; set; }
+
+        [Required(ErrorMessage = "El Rol Empleado es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre Rol")]
         public Nullable<int> idRol { get; set; }
+
+        [Required(ErrorMessage = "El Nombre Operacion es obligatorio no se puede dejar espacios en blanco")]
+        [DisplayName("Nombre Operacion")]
         public Nullable<int> idOperacion { get; set; }
-    
+
         public virtual Operacione Operacione { get; set; }
         public virtual Rol Rol { get; set; }
     }
