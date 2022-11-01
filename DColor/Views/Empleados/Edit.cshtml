@@ -62,13 +62,7 @@
                         @Html.ValidationMessageFor(model => model.correo, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.contraseña, "Contraseña", htmlAttributes: new { @class = "control-label" })
-                        @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "password", @maxlength = "20" } })
-                        @Html.ValidationMessageFor(model => model.contraseña, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+      
                 <div class="col-4">
                     <div class="form-group">
                         @Html.LabelFor(model => model.idEstado, "Estado Empleado", htmlAttributes: new { @class = "control-label" })
