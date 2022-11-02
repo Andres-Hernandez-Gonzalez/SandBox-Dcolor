@@ -11,7 +11,11 @@ namespace DColor.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using DColor.Entities;
+
     public partial class Materiales_Trabajo
     {
         public int idMaterial { get; set; }
